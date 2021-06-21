@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/dcc8e657f0.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/public/css/showTodo.css">
+  <title>Your ToDo</title>
+</head>
+<body>
+  
+  <div class="main-container">
+    <h1>Your Today Task</h1>
+    <div class="todo-container">
+      <h1>Bonjour <i class="fas fa-child"></i></h1>
+      <h2>Task Name : <%= foundItem.item %> </h2>
+  
+      <form action="/todolist/<%= foundItem.id %>?_method=DELETE" method="POST">
+        <div class="btn-container">
+          <button class="trash-b tn">Delete</button>
+        </div>
+      </form>
+    
+    </div>
+
+  </div>
+
+</body>
+</html>

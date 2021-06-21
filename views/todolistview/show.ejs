@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/public/css/show.css">
+  <script src="https://kit.fontawesome.com/dcc8e657f0.js" crossorigin="anonymous"></script>
+  <title>TODO-LIST</title>
+</head>
+<body>
+
+
+  <div class="box">
+
+    <h1>TODO-LIST</h1>
+
+    <form action="/todolist" method="POST" class="inputArea" autocomplete="off">
+        <input type="text" name="newItem" placeholder="Enter your Todo">
+        <button>+</button>
+    </form>
+
+    <div class="list-items">
+     
+      <ul>
+
+          <% for( let todoItem of todoItems ) { %>
+            <div class="todo">
+              <li><%= todoItem.item %> </li>
+              <a href="/todolist/<%= todoItem.id %>"><button class="trash-btn"><i class="fas fa-arrow-right"></i></button></a>
+            </div>
+          <% } %>
+     
+      </ul>
+
+    </div>
+  </div>
+
+  <script src="/public/js/styles.js"></script>
+
+</body>
+</html>

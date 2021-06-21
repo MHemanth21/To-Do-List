@@ -1,0 +1,146 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom right, #efa2b4, #aef1ee);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #cddc39;
+  z-index: -1;
+  opacity: 0.12; 
+}
+
+.box {
+  max-width: 400px;
+  width: 100%;
+  margin: 100px auto;
+  background: rgba(225, 225, 225, 0.25);
+  box-shadow: -10px 10px 40px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.box h1 {
+  color: #e02f6b;
+  text-align: center;
+}
+
+.box .inputArea {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  margin: 20px auto;
+}
+
+.inputArea input {
+  width: 85%;
+  height: 100%;
+  font-size: 1rem;
+  font-weight: 300;
+  padding-left: 15px;
+  border: 1px solid #e02f6b;
+  outline-color: #e02f6b;
+  border-radius: 10px;
+  
+}
+
+.inputArea button {
+  width: 60px;
+  height: 100%;
+  margin: auto 10px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: 600; 
+  text-align: center;
+  outline: none;
+  border: none;
+  color: white;
+  background: #e02f6b;
+  cursor: pointer;
+}
+
+.list-items {
+    width: 90%;
+    margin-left: 10px;
+}
+
+.list-items ul {
+  min-width: 30%;
+  list-style-type: none;
+}
+
+.todo {
+  background: rgba(225, 225, 225, 0.40);
+  margin: 0.5rem 0.5rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 0 1rem;
+}
+
+.todo li {
+  flex: 1;
+  color: #e02f6b;
+}
+
+.check-btn, .trash-btn {
+  cursor: pointer;
+  padding: 0.5rem;
+  color: #e02f6b;
+  background: green;
+  border: none;
+  font-size: 15px;
+}
+
+.trash-btn {
+  background: white;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+
+.trash-btn:hover {
+  background: #e02f6b;
+  color: white;
+}
+
+.todoContainer {
+  width: 100%;
+  background: #D6E6F1;
+  width: 20%;
+  margin: 10% auto;
+  text-align: center;
+  padding: 2% 6%;
+}
+
+.todoContainer h1 {
+  padding: 15px 0;
+  text-transform: uppercase;
+}
+
+.todoContainer button {
+  text-transform: uppercase;
+  background: white;
+  color: red;
+  border: 1px solid red;
+  border-radius: 150px 150px 50px 50px ;
+}
+
+.todoContainer button:hover {
+  background: red;
+  color: white;
+}
+
+.todo li {
+  text-transform: uppercase;
+}
